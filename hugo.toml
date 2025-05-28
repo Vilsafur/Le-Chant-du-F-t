@@ -1,4 +1,4 @@
 baseURL = 'https://vilsafur.github.io/Le-Chant-du-F-t/'
-languageCode = 'en-us'
-title = 'My New Hugo Site'
+languageCode = 'fr-fr'
+title = 'Le chant du fût'
 theme = "dragons-taverne"
