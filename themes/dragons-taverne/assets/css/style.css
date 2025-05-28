@@ -1,8 +1,11 @@
+/* ---------------------------------- */
+/* RESET ET BASE */
+/* ---------------------------------- */
 html, body {
   height: 100%;
   margin: 0;
   padding: 0;
-  min-height: 100vh; /* Hauteur minimale de la page = hauteur de la fenêtre */
+  min-height: 100vh;
 }
 
 body {
@@ -11,17 +14,28 @@ body {
   background-repeat: repeat;
   background-size: cover;
   font-family: 'Crimson Pro', serif;
-  margin: 0;
-  padding: 0;
   line-height: 1.6;
   display: flex;
   flex-direction: column;
+  font-size: 1.2rem;
 }
 
+@media (max-width: 768px) {
+  body {
+    font-size: 1.3rem;
+  }
+}
+
+/* ---------------------------------- */
+/* TYPOGRAPHIE */
+/* ---------------------------------- */
 h1, h2 {
   font-family: 'MedievalSharp', cursive;
 }
 
+/* ---------------------------------- */
+/* HEADER ET FOOTER */
+/* ---------------------------------- */
 header, footer {
   color: #fff;
   padding: 1rem;
@@ -30,6 +44,10 @@ header, footer {
 
 footer {
   background-color: #5e4b3c;
+}
+
+footer p {
+  margin: 0;
 }
 
 header img {
@@ -47,7 +65,6 @@ header h1 {
   left: 50%;
   transform: translate(-50%, -50%);
   margin: 0;
-  font-family: 'MedievalSharp', cursive;
   font-size: clamp(1.5rem, 4vw, 3rem);
   color: #fff7d0;
   text-shadow: 2px 2px 4px #000;
@@ -59,6 +76,9 @@ header a, nav a {
   margin: 0 0.5rem;
 }
 
+/* ---------------------------------- */
+/* CONTENU PRINCIPAL */
+/* ---------------------------------- */
 main {
   width: 1200px;
   max-width: 80vw;
@@ -66,29 +86,27 @@ main {
   padding: 1rem;
   background-color: #fff8e1;
   border: 2px solid #c2a477;
-  flex: 1; /* Prend tout l'espace disponible entre header et footer */
+  flex: 1;
 }
 
-footer p {
-  margin: 0;
-}
-
+/* ---------------------------------- */
+/* LISTE DES CHAPITRES (INDEX) */
+/* ---------------------------------- */
 ul {
   list-style-type: none;
   padding: 0;
-  
 }
 
 ul li {
   margin-bottom: 0.5rem;
   display: flex;
-  justify-content: center; /* Centre les éléments de la liste */
-  align-items: center; /* Centre verticalement les éléments de la liste */
+  justify-content: center;
+  align-items: center;
 }
 
 ul li a {
   display: inline-block;
-  width: 450px; /* Largeur fixe, ajuste selon ton besoin */
+  width: 450px;
   padding: 0.5rem 1rem;
   background-color: #c2a477;
   color: #fff7d0;
@@ -97,7 +115,7 @@ ul li a {
   font-size: 1.2rem;
   border-radius: 8px;
   box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
-  text-align: center; /* Centre le texte */
+  text-align: center;
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
@@ -106,24 +124,32 @@ ul li a:hover {
   transform: translateY(-2px);
 }
 
-body {
-  font-size: 1.2rem; /* Taille de base pour desktop */
-}
-
 @media (max-width: 768px) {
-  body {
-    font-size: 1.3rem; /* Augmente légèrement la taille sur mobile */
-  }
-
   ul li a {
-    font-size: 1.6rem; /* Plus lisible sur mobile */
-    width: 90%; /* Largeur presque totale sur mobile */
+    font-size: 1.6rem;
+    width: 90%;
   }
 }
 
+/* ---------------------------------- */
+/* CONTENU DES CHAPITRES */
+/* ---------------------------------- */
+article {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+article p {
+  flex: 1;
+}
+
+/* ---------------------------------- */
+/* NAVIGATION ENTRE CHAPITRES */
+/* ---------------------------------- */
 .chapter-navigation {
   display: flex;
-  justify-content: space-between; /* Répartit les liens */
+  justify-content: space-between;
   margin-top: 2rem;
 }
 
@@ -145,10 +171,10 @@ body {
 }
 
 .chapter-navigation .prev-link {
-  order: 1; /* Aligne à gauche */
+  order: 1;
 }
 
 .chapter-navigation .next-link {
-  order: 2; /* Aligne à droite */
+  order: 2;
   margin-left: auto;
 }
