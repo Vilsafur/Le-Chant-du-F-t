@@ -1,0 +1,154 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh; /* Hauteur minimale de la page = hauteur de la fenêtre */
+}
+
+body {
+  background-color: #f3f1e7;
+  background-image: url('/img/parchemin.jpg');
+  background-repeat: repeat;
+  background-size: cover;
+  font-family: 'Crimson Pro', serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+}
+
+h1, h2 {
+  font-family: 'MedievalSharp', cursive;
+}
+
+header, footer {
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+}
+
+footer {
+  background-color: #5e4b3c;
+}
+
+header img {
+  margin: 0 auto;
+  width: auto;
+  height: auto;
+  display: block;
+  max-height: 450px;
+  max-width: 95vw;
+}
+
+header h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  font-family: 'MedievalSharp', cursive;
+  font-size: clamp(1.5rem, 4vw, 3rem);
+  color: #fff7d0;
+  text-shadow: 2px 2px 4px #000;
+}
+
+header a, nav a {
+  color: #ffd700;
+  text-decoration: none;
+  margin: 0 0.5rem;
+}
+
+main {
+  width: 1200px;
+  max-width: 80vw;
+  margin: 2rem auto;
+  padding: 1rem;
+  background-color: #fff8e1;
+  border: 2px solid #c2a477;
+  flex: 1; /* Prend tout l'espace disponible entre header et footer */
+}
+
+footer p {
+  margin: 0;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  
+}
+
+ul li {
+  margin-bottom: 0.5rem;
+  display: flex;
+  justify-content: center; /* Centre les éléments de la liste */
+  align-items: center; /* Centre verticalement les éléments de la liste */
+}
+
+ul li a {
+  display: inline-block;
+  width: 450px; /* Largeur fixe, ajuste selon ton besoin */
+  padding: 0.5rem 1rem;
+  background-color: #c2a477;
+  color: #fff7d0;
+  text-decoration: none;
+  font-family: 'MedievalSharp', cursive;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+  text-align: center; /* Centre le texte */
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+ul li a:hover {
+  background-color: #a88f65;
+  transform: translateY(-2px);
+}
+
+body {
+  font-size: 1rem; /* Taille de base pour desktop */
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 1.1rem; /* Augmente légèrement la taille sur mobile */
+  }
+
+  ul li a {
+    font-size: 1.4rem; /* Plus lisible sur mobile */
+    width: 90%; /* Largeur presque totale sur mobile */
+  }
+}
+
+.chapter-navigation {
+  display: flex;
+  justify-content: space-between; /* Répartit les liens */
+  margin-top: 2rem;
+}
+
+.chapter-navigation a {
+  display: inline-block;
+  padding: 0.4rem 0.8rem;
+  background-color: #c2a477;
+  color: #fff7d0;
+  text-decoration: none;
+  font-family: 'MedievalSharp', cursive;
+  border-radius: 8px;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.chapter-navigation a:hover {
+  background-color: #a88f65;
+  transform: translateY(-2px);
+}
+
+.chapter-navigation .prev-link {
+  order: 1; /* Aligne à gauche */
+}
+
+.chapter-navigation .next-link {
+  order: 2; /* Aligne à droite */
+  margin-left: auto;
+}

@@ -1,0 +1,10 @@
+{{ define "main" }}
+<h2>{{ .Title }}</h2>
+<p>Bienvenue à la Taverne de l’Ours Doré.<br>Découvrez les aventures de mon personnage solo dans l’univers Dragons.</p>
+
+<ul>
+  {{ range .Pages.ByDate }}
+    <li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>
+  {{ end }}
+</ul>
+{{ end }}

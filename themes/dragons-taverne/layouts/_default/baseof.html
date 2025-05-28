@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ block "title" . }}{{ .Title }}{{ end }} | Taverne</title>
+  {{ $style := resources.Get "css/style.css" | minify | fingerprint }}
+  <link rel="stylesheet" href="{{ $style.RelPermalink }}">
+  {{ block "head" . }}{{ end }}
+  <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&family=Crimson+Pro:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header style="position: relative;">
+    <a href="{{ .Site.BaseURL }}">
+        <img src="{{ "/img/banner.png" | relURL }}" alt="Bannière Taverne">
+        <h1>
+            Taverne de l’Ours Doré
+        </h1>
+    </a>
+    </header>
+  <main>
+    {{ block "main" . }}{{ end }}
+  </main>
+  <footer>
+    <p>À la vôtre, compagnons d’auberge 🍻</p>
+  </footer>
+</body>
+</html>

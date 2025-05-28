@@ -1,0 +1,7 @@
+name = "dragons-taverne"
+license = "MIT"
+licenselink = "https://opensource.org/licenses/MIT"
+description = "Un thème inspiré de l'univers Dragons pour un site narratif solo"
+homepage = "https://github.com/ton-compte/dragons-taverne"
+tags = ["fantasy", "dragons", "taverne"]
+min_version = "0.80.0"
