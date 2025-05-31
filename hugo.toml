@@ -1,4 +1,4 @@
-baseURL = 'https://vilsafur.github.io/Le-Chant-du-F-t/'
-languageCode = 'fr-fr'
+baseURL = 'https://vilsafur.github.io/le-chant-du-fut/'
+languageCode = 'fr-FR'
 title = 'Le chant du fût'
 theme = "dragons-taverne"
